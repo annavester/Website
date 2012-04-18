@@ -1,4 +1,59 @@
 @import "compass/reset";
-@import compass/utilities.sass
+@import "compass/typography/text/replacement";
+@import "compass/css3";
 
+@mixin social-btn {
+  display:inline-block;height:32px;width:32px;
+}
+
+$socialimg: '/images/socialsprite.png'; 
+
+@font-face {
+    font-family: 'HarabaraHandItalic';
+    src: url('/fonts/HarabaraHand-webfont.eot');
+    src: url('/fonts/HarabaraHand-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/HarabaraHand-webfont.woff') format('woff'),
+         url('/fonts/HarabaraHand-webfont.ttf') format('truetype'),
+         url('/fonts/HarabaraHand-webfont.svg#HarabaraHandItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{background:#ecebeb url(/images/bg.jpg) no-repeat 0 0;background-size:100% 444px;padding-top:39px;}
+  .wrapper { width:960px;margin:0 auto; }
+  .social{position:absolute;top:0;left:0;width:100%;background:#ddb027;padding:3px 0;border-bottom:1px solid #efc442;
+    ul{padding-left:5px;
+      li{float:left;margin-right:3px;
+        a{ @include social-btn;
+          &.github{ @include replace-text( $socialimg, 0, 0 ); }
+          &.linkedin{ @include replace-text( $socialimg, 0, -32px ); }
+        }
+      }
+    }
+    
+  }
+  
+  #content{width:960px;margin:0 auto;
+    header{background:#000 url(/images/bg_hdr.png) repeat-x 0 55px;height:90px;position:relative;
+      & > *{margin:0;}
+      h1{color:#fff;font:25px 'HarabaraHandItalic',cursive;position:absolute;left:20px;bottom:0;
+        b{font-weight:900;font-size:36px;}
+      }      
+      nav{color:yellow;position:absolute;right:20px;bottom:15px;}
+    }
+    .pov{background:#fff;@include border-bottom-radius(15px);@include box-shadow(#666 1px 1px 8px);height:500px;margin-bottom:30px;
+      
+    }
+  }
+  
+  footer{ border-top:1px solid #ddd;text-align:center;padding:10px 0;
+    @include background-image(linear-gradient(white, #ddd));
+    li{display:inline;
+      a{ @include social-btn;
+        &.github{ @include replace-text( $socialimg, 0, 0 ); }
+        &.linkedin{ @include replace-text( $socialimg, 0, -32px ); }
+      }
+    }
+    p{font:bold 11px/18px Calibri,Arial,sans-serif;margin-top:5px;}
+  }
 p{color:#333;}
