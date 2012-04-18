@@ -20,3 +20,15 @@ end
 get '/' do
   haml :index
 end
+
+get '/projects/' do
+  haml :projects
+end
+
+get '/resume/' do
+  haml :resume
+end
+
+get '/contact/' do
+  haml :contact
+end

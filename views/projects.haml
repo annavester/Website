@@ -19,9 +19,9 @@
           { web developer }
         %nav 
           %ul
-            %li{:class=>"active"}
-              %a{:href=>"/"} Home 
             %li
+              %a{:href=>"/"} Home 
+            %li{:class=>"active"}
               %a{:href=>"/projects/"} Projects 
             %li
               %a{:href=>"/resume/"} Resume 
@@ -29,22 +29,10 @@
               %a{:href=>"/contact/"} Contact
         
       
-      %article{:class=>"pov"}
-        %p
-          This website is being updated. Please come back soon.
+      %article
+        %h2
+          Projects
       
-      %div{:class=>"mod"}
-        %h2
-          About Me
-          
-      %div{:class=>"mod"}
-        %h2
-          My Tweets
-      
-      %div{:class=>"mod"}
-        %h2
-          On My Bookshelf
-          
     %footer
       %div{:class=>"wrapper"}
         %ul
