@@ -1,1 +1,242 @@
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}body{line-height:1}ol,ul{list-style:none}table{border-collapse:collapse;border-spacing:0}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle}q,blockquote{quotes:none}q:before,q:after,blockquote:before,blockquote:after{content:"";content:none}a img{border:none}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block}@font-face{font-family:'HarabaraHandItalic';src:url("/fonts/HarabaraHand-webfont.eot");src:url("/fonts/HarabaraHand-webfont.eot?#iefix") format("embedded-opentype"),url("/fonts/HarabaraHand-webfont.woff") format("woff"),url("/fonts/HarabaraHand-webfont.ttf") format("truetype"),url("/fonts/HarabaraHand-webfont.svg#HarabaraHandItalic") format("svg");font-weight:normal;font-style:normal}body{background:#ecebeb url(/images/bg.jpg) no-repeat 0 0;background-size:100% 444px;padding-top:39px}body p{color:#333}.wrapper{width:960px;margin:0 auto}.social{position:absolute;top:0;left:0;width:100%;background:#ddb027;padding:3px 0;border-bottom:1px solid #efc442;height:32px}.social ul{padding-left:5px}.social ul li{float:left;margin-right:3px}.social ul li a{display:inline-block;height:32px;width:32px}.social ul li a.github{text-indent:110%;white-space:nowrap;overflow:hidden;background-image:url('../images/socialsprite.png?1334513184');background-repeat:no-repeat;background-position:0 0}.social ul li a.linkedin{text-indent:110%;white-space:nowrap;overflow:hidden;background-image:url('../images/socialsprite.png?1334513184');background-repeat:no-repeat;background-position:0 -32px}#content{width:960px;margin:0 auto}#content header{background:#000 url(/images/bg_hdr.png) repeat-x 0 55px;height:90px;position:relative}#content header>*{margin:0}#content header h1{color:#fff;font:25px 'HarabaraHandItalic',cursive;position:absolute;left:20px;bottom:0}#content header h1 b{font-weight:900;font-size:36px}#content header nav{position:absolute;right:20px;top:-39px}#content header nav li{display:inline-block;padding:98px 10px 25px 10px}#content header nav li a{color:#c5bfab;text-decoration:none;font:14px 'Oxygen', Arial,sans-serif}#content header nav li a:hobver{color:#fff}#content header nav li.active{-moz-border-radius-bottomleft:5px;-webkit-border-bottom-left-radius:5px;-ms-border-bottom-left-radius:5px;-o-border-bottom-left-radius:5px;border-bottom-left-radius:5px;-moz-border-radius-bottomright:5px;-webkit-border-bottom-right-radius:5px;-ms-border-bottom-right-radius:5px;-o-border-bottom-right-radius:5px;border-bottom-right-radius:5px;background:#a51a03 url(/images/ornament.png) no-repeat 50% 92%;-webkit-box-shadow:rgba(0,0,0,0.5) 1px 1px 15px;-moz-box-shadow:rgba(0,0,0,0.5) 1px 1px 15px;box-shadow:rgba(0,0,0,0.5) 1px 1px 15px}#content .pov{height:500px;background:#fff;-moz-border-radius-bottomleft:15px;-webkit-border-bottom-left-radius:15px;-ms-border-bottom-left-radius:15px;-o-border-bottom-left-radius:15px;border-bottom-left-radius:15px;-moz-border-radius-bottomright:15px;-webkit-border-bottom-right-radius:15px;-ms-border-bottom-right-radius:15px;-o-border-bottom-right-radius:15px;border-bottom-right-radius:15px;-webkit-box-shadow:#666 1px 1px 8px;-moz-box-shadow:#666 1px 1px 8px;box-shadow:#666 1px 1px 8px;margin-bottom:30px}#content>article{min-height:500px;background:#fff;-moz-border-radius-bottomleft:15px;-webkit-border-bottom-left-radius:15px;-ms-border-bottom-left-radius:15px;-o-border-bottom-left-radius:15px;border-bottom-left-radius:15px;-moz-border-radius-bottomright:15px;-webkit-border-bottom-right-radius:15px;-ms-border-bottom-right-radius:15px;-o-border-bottom-right-radius:15px;border-bottom-right-radius:15px;-webkit-box-shadow:#666 1px 1px 8px;-moz-box-shadow:#666 1px 1px 8px;box-shadow:#666 1px 1px 8px;margin-bottom:30px;padding:15px 20px}#content .mod h2{color:#333;font:bold 16px 'HarabaraHandItalic',cursive}footer{border-top:1px solid #ddd;text-align:center;padding:10px 0;background-image:-webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #dddddd));background-image:-webkit-linear-gradient(#ffffff,#dddddd);background-image:-moz-linear-gradient(#ffffff,#dddddd);background-image:-o-linear-gradient(#ffffff,#dddddd);background-image:-ms-linear-gradient(#ffffff,#dddddd);background-image:linear-gradient(#ffffff,#dddddd)}footer li{display:inline}footer li a{display:inline-block;height:32px;width:32px}footer li a.github{text-indent:110%;white-space:nowrap;overflow:hidden;background-image:url('../images/socialsprite.png?1334513184');background-repeat:no-repeat;background-position:0 0}footer li a.linkedin{text-indent:110%;white-space:nowrap;overflow:hidden;background-image:url('../images/socialsprite.png?1334513184');background-repeat:no-repeat;background-position:0 -32px}footer p{font:bold 11px/18px Calibri,Arial,sans-serif;margin-top:5px}@media screen and (min-width: 0) and (max-width: 959px){body{background-image:none}#content,.wrapper{width:100%}}@media screen and (max-width: 750px){#content header h1{font:14px Georgia,serif;color:#000;left:inherit;right:5px;top:-29px}#content header h1 b{font-size:13px}#content header nav{position:absolute;right:5px;top:0}#content header nav li{padding:59px 10px 25px 10px}}@media screen and (max-width: 480px){.social ul{display:none}#content header h1{left:5px;right:inherit}}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+q, blockquote {
+  quotes: none; }
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none; }
+
+a img {
+  border: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block; }
+
+@font-face {
+  font-family: 'HarabaraHandItalic';
+  src: url("/fonts/HarabaraHand-webfont.eot");
+  src: url("/fonts/HarabaraHand-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/HarabaraHand-webfont.woff") format("woff"), url("/fonts/HarabaraHand-webfont.ttf") format("truetype"), url("/fonts/HarabaraHand-webfont.svg#HarabaraHandItalic") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+body {
+  background: #ecebeb url(/images/bg.jpg) no-repeat 0 0;
+  background-size: 100% 444px;
+  padding-top: 39px; }
+body p {
+  color: #333; }
+
+.no-backgroundsize body {
+  background-image: none; }
+
+.wrapper {
+  width: 960px;
+  margin: 0 auto; }
+
+.social {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #ddb027;
+  padding: 3px 0;
+  border-bottom: 1px solid #efc442;
+  height: 32px; }
+.social ul {
+  padding-left: 5px; }
+.social ul li {
+  float: left;
+  margin-right: 3px; }
+.social ul li a {
+  display: inline-block;
+  height: 32px;
+  width: 32px; }
+.social ul li a.github {
+  text-indent: 110%;
+  white-space: nowrap;
+  overflow: hidden;
+  background-image: url('../images/socialsprite.png?1334513184');
+  background-repeat: no-repeat;
+  background-position: 0 0; }
+.social ul li a.linkedin {
+  text-indent: 110%;
+  white-space: nowrap;
+  overflow: hidden;
+  background-image: url('../images/socialsprite.png?1334513184');
+  background-repeat: no-repeat;
+  background-position: 0 -32px; }
+
+#content {
+  width: 960px;
+  margin: 0 auto; }
+#content header {
+  background: black url(/images/bg_hdr.png) repeat-x 0 55px;
+  height: 90px;
+  position: relative; }
+#content header > * {
+  margin: 0; }
+#content header h1 {
+  color: #fff;
+  font: 25px 'HarabaraHandItalic',cursive;
+  position: absolute;
+  left: 20px;
+  bottom: 0; }
+#content header h1 b {
+  font-weight: 900;
+  font-size: 36px; }
+#content header nav {
+  position: absolute;
+  right: 20px;
+  top: -39px; }
+#content header nav li {
+  display: inline-block;
+  padding: 98px 10px 25px 10px; }
+#content header nav li a {
+  color: #c5bfab;
+  text-decoration: none;
+  font: 14px 'Oxygen', Arial,sans-serif; }
+#content header nav li a:hobver {
+  color: #fff; }
+#content header nav li.active {
+  -moz-border-radius-bottomleft: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  -ms-border-bottom-left-radius: 5px;
+  -o-border-bottom-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  -moz-border-radius-bottomright: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  -ms-border-bottom-right-radius: 5px;
+  -o-border-bottom-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background: #a51a03 url(/images/ornament.png) no-repeat 50% 92%;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 1px 1px 15px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.5) 1px 1px 15px;
+  box-shadow: rgba(0, 0, 0, 0.5) 1px 1px 15px; }
+.no-backgroundsize #content header {
+  -webkit-box-shadow: #666666 1px 1px 8px;
+  -moz-box-shadow: #666666 1px 1px 8px;
+  box-shadow: #666666 1px 1px 8px; }
+#content .pov {
+  height: 500px;
+  padding: 0;
+  background: #fff;
+  -moz-border-radius-bottomleft: 15px;
+  -webkit-border-bottom-left-radius: 15px;
+  -ms-border-bottom-left-radius: 15px;
+  -o-border-bottom-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  -moz-border-radius-bottomright: 15px;
+  -webkit-border-bottom-right-radius: 15px;
+  -ms-border-bottom-right-radius: 15px;
+  -o-border-bottom-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  -webkit-box-shadow: #666666 1px 1px 8px;
+  -moz-box-shadow: #666666 1px 1px 8px;
+  box-shadow: #666666 1px 1px 8px;
+  margin-bottom: 30px; }
+#content > article {
+  min-height: 500px;
+  background: #fff;
+  -moz-border-radius-bottomleft: 15px;
+  -webkit-border-bottom-left-radius: 15px;
+  -ms-border-bottom-left-radius: 15px;
+  -o-border-bottom-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  -moz-border-radius-bottomright: 15px;
+  -webkit-border-bottom-right-radius: 15px;
+  -ms-border-bottom-right-radius: 15px;
+  -o-border-bottom-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  -webkit-box-shadow: #666666 1px 1px 8px;
+  -moz-box-shadow: #666666 1px 1px 8px;
+  box-shadow: #666666 1px 1px 8px;
+  margin-bottom: 30px;
+  padding: 15px 20px; }
+#content .mod h2 {
+  color: #333;
+  font: bold 16px 'HarabaraHandItalic',cursive; }
+
+footer {
+  border-top: 1px solid #ddd;
+  text-align: center;
+  padding: 10px 0;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #dddddd));
+  background-image: -webkit-linear-gradient(#ffffff, #dddddd);
+  background-image: -moz-linear-gradient(#ffffff, #dddddd);
+  background-image: -o-linear-gradient(#ffffff, #dddddd);
+  background-image: -ms-linear-gradient(#ffffff, #dddddd);
+  background-image: linear-gradient(#ffffff, #dddddd);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#ffffff',EndColorStr='#dddddd'); }
+footer li {
+  display: inline; }
+footer li a {
+  display: inline-block;
+  height: 32px;
+  width: 32px; }
+footer li a.github {
+  text-indent: 110%;
+  white-space: nowrap;
+  overflow: hidden;
+  background-image: url('../images/socialsprite.png?1334513184');
+  background-repeat: no-repeat;
+  background-position: 0 0; }
+footer li a.linkedin {
+  text-indent: 110%;
+  white-space: nowrap;
+  overflow: hidden;
+  background-image: url('../images/socialsprite.png?1334513184');
+  background-repeat: no-repeat;
+  background-position: 0 -32px; }
+footer p {
+  font: bold 11px/18px Calibri, Arial, sans-serif;
+  margin-top: 5px; }
+
+@media screen and (min-width: 0) and (max-width: 959px) {
+  body {
+    background-image: none; }
+
+  #content, .wrapper {
+    width: 100%; } }
+@media screen and (max-width: 750px) {
+  #content header h1 {
+    font: 14px Georgia,serif;
+    color: #000;
+    left: inherit;
+    right: 5px;
+    top: -29px; }
+  #content header h1 b {
+    font-size: 13px; }
+  #content header nav {
+    position: absolute;
+    right: 5px;
+    top: 0; }
+  #content header nav li {
+    padding: 59px 10px 25px 10px; } }
+@media screen and (max-width: 480px) {
+  .social ul {
+    display: none; }
+
+  #content header h1 {
+    left: 5px;
+    right: inherit; } }

@@ -24,8 +24,9 @@ $socialimg: '/images/socialsprite.png';
 }
 
 body{background:#ecebeb url(/images/bg.jpg) no-repeat 0 0;background-size:100% 444px;padding-top:39px;
-    p{color:#333;}
+  p{color:#333;}
 }
+  .no-backgroundsize body{background-image:none;}
 
   .wrapper { width:960px;margin:0 auto; }
   .social{position:absolute;top:0;left:0;width:100%;background:#ddb027;padding:3px 0;border-bottom:1px solid #efc442;height:32px;
@@ -55,7 +56,9 @@ body{background:#ecebeb url(/images/bg.jpg) no-repeat 0 0;background-size:100% 4
         }
       }
     }
-    .pov{height:500px; @include common-bg;
+    .no-backgroundsize & header{ @include box-shadow(#666 1px 1px 8px);}
+    
+    .pov{height:500px;padding:0;@include common-bg;
       
     }
     &>article{min-height:500px; @include common-bg;padding:15px 20px;
@@ -67,6 +70,7 @@ body{background:#ecebeb url(/images/bg.jpg) no-repeat 0 0;background-size:100% 4
   
   footer{ border-top:1px solid #ddd;text-align:center;padding:10px 0;
     @include background-image(linear-gradient(white, #ddd));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#ffffff',EndColorStr='#dddddd');
     li{display:inline;
       a{ @include social-btn;
         &.github{ @include replace-text( $socialimg, 0, 0 ); }
