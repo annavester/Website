@@ -1,63 +1,56 @@
-!!! 5
-!= cc_html(:lang => 'en') do
-  %head
-    %meta{:'http-equiv'=>"X-UA-Compatible", :content=>"IE=edge,chrome=1"}
-    %title Anna Vester - Freelance Web Developer
-    %link{:rel=>"stylesheet", :type=>"text/css",:href=>"http://fonts.googleapis.com/css?family=Oxygen"}
-    %link{:rel => "stylesheet", :type => "text/css", :href => "/css/main.css"}
-    %script{:src=>"/js/modernizr.js"}
-    /[if lt IE 9]
-      %script{:src=>"/js/PIE.js"}
-  %body
-    %div{:class=>"social"}
-      %ul
-        %li 
-          %a{:href=>"http://github.com/annavester", :class=>"github"} Github
-        %li 
-          %a{:href=>"http://linkedin.com/annavester", :class=>"linkedin"} LinkedIn        
-          
-    %section{:id=>"content"}
-      %header
-        %h1 
-          %b Anna Vester
-          { web developer }
-        %nav 
-          %ul
-            %li{:class=>"active"}
-              %a{:href=>"/"} Home 
-            %li
-              %a{:href=>"/projects/"} Projects 
-            %li
-              %a{:href=>"/resume/"} Resume 
-            %li
-              %a{:href=>"/contact/"} Contact
-        
-      
-      %article{:class=>"pov"}
-        %p
-          This website is being updated. Please come back soon.
-      
-      %div{:class=>"mod"}
-        %h2
-          About Me
-          
-      %div{:class=>"mod"}
-        %h2
-          My Tweets
-      
-      %div{:class=>"mod"}
-        %h2
-          On My Bookshelf
-          
-    %footer
-      %div{:class=>"wrapper"}
-        %ul
-          %li 
-            %a{:href=>"http://github.com/annavester", :class=>"github ir"} Github
-          %li 
-            %a{:href=>"http://linkedin.com/annavester", :class=>"linkedin"} LinkedIn    
-        %p
-          Design &amp; Development by Anna Vester
-          
-    %script{:src=>"/js/jquery-1.7.2.min.js"}
-    %script{:src=>"/js/scripts.js"}   
+%header
+  %h1 
+    %b Anna Vester
+    { web developer }
+  %nav 
+    %ul
+      %li{:class=>"active"}
+        %a{:href=>"/"} Home 
+      %li
+        %a{:href=>"/projects/"} Projects 
+      %li
+        %a{:href=>"/resume/"} Resume 
+      %li
+        %a{:href=>"/contact/"} Contact
+
+%article{:class=>"pov"}
+  %div{:class=>"flexslider"}
+    %ul{:class=>"slides"}
+      %li
+        %img{:src=>"/images/demo-stuff/inacup_samoa.jpg", :alt=>"Sample"}
+          %p{:class=>"flex-caption"} Captions and cupcakes. Winning combination.
+      %li
+        %a{:href=>"#"} 
+          %img{:src=>"/images/demo-stuff/inacup_pumpkin.jpg", :alt=>"Sample"}
+        %p{:class=>"flex-caption"} This is image in a link!
+      %li
+        %img{:src=>"/images/demo-stuff/inacup_donut.jpg", :alt=>"Sample"}
+      %li
+        %img{:src=>"/images/demo-stuff/inacup_vanilla.jpg", :alt=>"Sample"}
+
+%div{:class=>"mod"}
+  %h2 About Me
+  %p I am a passionate developer who enjoys working with CSS, HTML, Javascript, Django, and etc.
+  %p I am proficient in HTML5, CSS3, Javascript (jQuery), Python, Django, ASP.Net, Wordpress, Umbraco. I specialize in .PSD to HTML Conversion.
+  
+%div{:class=>"mod"}
+  %h2 My Tweets
+  %ul{:class=>"tweets"}
+    - @tweets.each do |tweet|
+      %li
+        #{tweet['text']}
+    
+%div{:class=>"mod"}
+  %h2 On My Bookshelf
+  %h3 Reading
+  %ul{:class=>"clearfix"}
+    - @reading_now.each do |book|
+      %li
+        %a{:target=>'_blank', :href=>"http://books.annavester.com/book/#{book['id']}"}
+          %img{:src=>"http://books.annavester.com/static/images/book_thumbs/#{book['filename']}", :alt=>""}
+  %h3 Just Finished
+  %ul{:class=>"clearfix"}
+    - @latest_reads.each do |book|
+      %li
+        %a{:target=>'_blank', :href=>"http://books.annavester.com/book/#{book['id']}"}
+          %img{:src=>"http://books.annavester.com/static/images/book_thumbs/#{book['filename']}", :alt=>""}

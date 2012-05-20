@@ -2,15 +2,23 @@ require 'rubygems'
 require 'compass'
 require 'sinatra'
 require 'haml'
+require 'net/http'
+require 'open-uri'
+require 'json'
 
 set :app_file, __FILE__
 set :root, File.dirname(__FILE__)
 set :public_folder, 'static'
-set :views, "views"
 
 configure do
-  set :haml, {:format => :html5, :escape_html => true}
+  set :haml, {:format => :html5}
+  set :views, "#{File.dirname(__FILE__)}/views"
   Compass.add_project_configuration(File.join(Sinatra::Application.root, 'config', 'compass.config'))
+  SiteConfig = OpenStruct.new(
+    :title => 'Freelance Web Developer',
+    :author => 'Anna Vester',
+    :url_base => 'http://localhost:4567/'
+  )
 end
 
 module ConditionalHtmlHelper
@@ -18,11 +26,10 @@ module ConditionalHtmlHelper
   # http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
   def cc_html(options={}, &blk)
     attrs = options.map { |(k, v)| " #{h k}='#{h v}'" }.join('')
-    [ "<!--[if lt IE 7 ]> <html#{attrs} class='ie6'> <![endif]-->",
-      "<!--[if IE 7 ]>    <html#{attrs} class='ie7'> <![endif]-->",
-      "<!--[if IE 8 ]>    <html#{attrs} class='ie8'> <![endif]-->",
-      "<!--[if IE 9 ]>    <html#{attrs} class='ie9'> <![endif]-->",
-      "<!--[if (gt IE 9)|!(IE)]><!--> <html#{attrs}> <!--<![endif]-->",
+    [ "<!--[if lt IE 7]><html#{attrs} class='no-js lt-ie9 lt-ie8 lt-ie7 ie'> <![endif]-->",
+      "<!--[if IE 7]><html#{attrs} class='no-js lt-ie9 lt-ie8 ie'> <![endif]-->",
+      "<!--[if IE 8]><html#{attrs} class='no-js lt-ie9 ie'> <![endif]-->",
+      "<!--[if gt IE 8]><html#{attrs} class='no-js ie'> <![endif]-->",
       capture_haml(&blk).strip,
       "</html>"
     ].join("\n")
@@ -39,6 +46,30 @@ get '/css/:name.css' do
 end
 
 get '/' do
+  
+  query = '/1/statuses/user_timeline.json?include_rts=true&screen_name=annavester&count=5'  
+  uri = URI.parse('https://api.twitter.com/')  
+  http = Net::HTTP.new(uri.host, uri.port)
+  http.use_ssl = true
+  http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+  request = Net::HTTP::Get.new(query)
+  response = http.request(request)
+  @tweets = JSON.parse(response.body)
+  
+  query = '/api/v1/latest_read/10/'
+  uri = URI.parse('http://books.annavester.com/')   
+  http = Net::HTTP.new(uri.host, uri.port)
+  request = Net::HTTP::Get.new(query)
+  response = http.request(request)
+  @latest_reads = JSON.parse(response.body)
+  
+  query = '/api/v1/reading_now/5/'
+  uri = URI.parse('http://books.annavester.com/')   
+  http = Net::HTTP.new(uri.host, uri.port)
+  request = Net::HTTP::Get.new(query)
+  response = http.request(request)
+  @reading_now = JSON.parse(response.body)
+  
   haml :index
 end
 
@@ -53,3 +84,7 @@ end
 get '/contact/' do
   haml :contact
 end
+
+post '/contact/' do  
+  "You said '#{params[:message]}'"  
+end  

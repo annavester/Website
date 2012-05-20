@@ -1,30 +1,13 @@
 @import "compass/reset";
 @import "compass/typography/text/replacement";
 @import "compass/css3";
-
-@mixin social-btn {
-  display:inline-block;height:32px;width:32px;
-}
-
-@mixin common-bg{
-  background:#fff;@include border-bottom-radius(15px);@include box-shadow(#666 1px 1px 8px);margin-bottom:30px;
-}
-
-$socialimg: '/images/socialsprite.png'; 
-
-@font-face {
-    font-family: 'HarabaraHandItalic';
-    src: url('/fonts/HarabaraHand-webfont.eot');
-    src: url('/fonts/HarabaraHand-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/fonts/HarabaraHand-webfont.woff') format('woff'),
-         url('/fonts/HarabaraHand-webfont.ttf') format('truetype'),
-         url('/fonts/HarabaraHand-webfont.svg#HarabaraHandItalic') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
+@import "common";
+@import "flexslider";
 
 body{background:#ecebeb url(/images/bg.jpg) no-repeat 0 0;background-size:100% 444px;padding-top:39px;
-  p{color:#333;}
+  h2{color:#333;font:bold 16px 'HarabaraHandItalic',cursive;margin-bottom:5px;}
+  h3{color:#333;font:italic 18px Georgia,serif;margin-bottom:5px;}
+  p,.tweets li{font:13px Calibri,Arial,sans-serif;color:#666;margin-bottom:15px;}
 }
   .no-backgroundsize body{background-image:none;}
 
@@ -35,13 +18,16 @@ body{background:#ecebeb url(/images/bg.jpg) no-repeat 0 0;background-size:100% 4
         a{ @include social-btn;
           &.github{ @include replace-text( $socialimg, 0, 0 ); }
           &.linkedin{ @include replace-text( $socialimg, 0, -32px ); }
+          &.twitter{ @include replace-text( $socialimg, 0, -128px ); }
+          &.gplus{ @include replace-text( $socialimg, 0, -64px ); }
+          &.forrst{ @include replace-text( $socialimg, 0, -96px ); }
         }
       }
     }
     
   }
   
-  #content{width:960px;margin:0 auto;
+  #content{width:960px;margin:0 auto;padding-bottom:30px;
     header{background:#000 url(/images/bg_hdr.png) repeat-x 0 55px;height:90px;position:relative;
       & > *{margin:0;}
       h1{color:#fff;font:25px 'HarabaraHandItalic',cursive;position:absolute;left:20px;bottom:0;
@@ -50,7 +36,7 @@ body{background:#ecebeb url(/images/bg.jpg) no-repeat 0 0;background-size:100% 4
       nav{position:absolute;right:20px;top:-39px;
         li{display:inline-block;padding:98px 10px 25px 10px;
           a{color:#c5bfab;text-decoration:none;font:14px 'Oxygen', Arial,sans-serif;
-            &:hobver{color:#fff;}
+            &:hover{color:#fff;}
           }
           &.active{@include border-bottom-radius(5px);background:#a51a03 url(/images/ornament.png) no-repeat 50% 92%; @include box-shadow(rgba(black, 0.5) 1px 1px 15px); }
         }
@@ -58,23 +44,35 @@ body{background:#ecebeb url(/images/bg.jpg) no-repeat 0 0;background-size:100% 4
     }
     .no-backgroundsize & header{ @include box-shadow(#666 1px 1px 8px);}
     
-    .pov{height:500px;padding:0;@include common-bg;
+    .pov{padding:0;@include common-bg;padding-top:20px;
       
     }
-    &>article{min-height:500px; @include common-bg;padding:15px 20px;
+    &>article{@include common-bg;padding:15px 20px;
     
     }
     
-    .mod h2{color:#333;font:bold 16px 'HarabaraHandItalic',cursive;}
+    .mod{float:left;width:30%;background:url(/images/div.png) no-repeat 100% 50%;padding:0 1em;min-height:244px;
+      &:last-child{background-image:none;clear:none;}
+      h2{text-align:center;}
+      h3{clear:left;margin:10px 0 0 0;}
+      ul{margin-bottom:10px;}
+      .tweets li a{color:#ddb027;}
+      img{float:left;padding:5px 4px;width:50px;height:75px;
+        &:nth-child(1n-4){padding:5px 4px 5px 0;}
+      }
+    }
   }
   
   footer{ border-top:1px solid #ddd;text-align:center;padding:10px 0;
-    @include background-image(linear-gradient(white, #ddd));
+    @include background-image(linear-gradient(white, #ecebeb));
     filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#ffffff',EndColorStr='#dddddd');
     li{display:inline;
       a{ @include social-btn;
         &.github{ @include replace-text( $socialimg, 0, 0 ); }
         &.linkedin{ @include replace-text( $socialimg, 0, -32px ); }
+        &.twitter{ @include replace-text( $socialimg, 0, -128px ); }
+        &.gplus{ @include replace-text( $socialimg, 0, -64px ); }
+        &.forrst{ @include replace-text( $socialimg, 0, -96px ); }
       }
     }
     p{font:bold 11px/18px Calibri,Arial,sans-serif;margin-top:5px;}
@@ -93,10 +91,16 @@ body{background:#ecebeb url(/images/bg.jpg) no-repeat 0 0;background-size:100% 4
     nav{position:absolute;right:5px;top:0;
       li{padding:59px 10px 25px 10px;}
     }
-  }    
+  }  
+  #content .mod{width:45%;padding:0 2%;background:none;}
+  #content .mod:last-child{clear:left;}
 }
 
 @media screen and (max-width: 480px) {
   .social ul{display:none;}
-  #content header h1{left:5px;right:inherit;}
+  #content header{margin-bottom:40px;
+    h1{left:5px;right:inherit;}
+  }
+  #content .pov{display:none;}
+  #content .mod{width:95%;padding:0 2%;float:none;background:none;min-height:inherit;margin-bottom:20px;}
 }

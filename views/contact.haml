@@ -1,50 +1,21 @@
-!!! 5
-%html
-  %head
-    %title Anna Vester - Freelance Web Developer
-    %link{:rel=>"stylesheet", :type=>"text/css",:href=>"http://fonts.googleapis.com/css?family=Oxygen"}
-    %link{:rel => "stylesheet", :type => "text/css", :href => "/css/main.css"}
-    %script{:src=>"/js/modernizr.js"}
-    /[if lt IE 9]
-      %script{:src=>"/js/PIE.js"}
-  %body
-    %div{:class=>"social"}
-      %ul
-        %li 
-          %a{:href=>"http://github.com/annavester", :class=>"github"} Github
-        %li 
-          %a{:href=>"http://linkedin.com/annavester", :class=>"linkedin"} LinkedIn        
-          
-    %section{:id=>"content"}
-      %header
-        %h1 
-          %b Anna Vester
-          { web developer }
-        %nav 
-          %ul
-            %li
-              %a{:href=>"/"} Home 
-            %li
-              %a{:href=>"/projects/"} Projects 
-            %li
-              %a{:href=>"/resume/"} Resume 
-            %li{:class=>"active"}
-              %a{:href=>"/contact/"} Contact
-        
-      
-      %article
-        %h2
-          Contact
-      
-    %footer
-      %div{:class=>"wrapper"}
-        %ul
-          %li 
-            %a{:href=>"http://github.com/annavester", :class=>"github ir"} Github
-          %li 
-            %a{:href=>"http://linkedin.com/annavester", :class=>"linkedin"} LinkedIn    
-        %p
-          Design &amp; Development by Anna Vester
-          
-    %script{:src=>"/js/jquery-1.7.2.min.js"}
-    %script{:src=>"/js/scripts.js"}   
+%header
+  %h1 
+    %b Anna Vester
+    { web developer }
+  %nav 
+    %ul
+      %li
+        %a{:href=>"/"} Home 
+      %li
+        %a{:href=>"/projects/"} Projects 
+      %li
+        %a{:href=>"/resume/"} Resume 
+      %li{:class=>"active"}
+        %a{:href=>"/contact/"} Contact
+  
+%article
+  %h2 
+    Contact
+    %form{:action=>"/contact/", :method=>"post"}
+      %input{:type=>"text", :name=>"message"}
+      %input{:type=>"submit"}

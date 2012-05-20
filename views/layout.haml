@@ -1,0 +1,43 @@
+!!! 5
+!= cc_html(:lang => 'en') do
+  %head
+    %meta{:'http-equiv'=>"X-UA-Compatible", :content=>"IE=edge,chrome=1"}
+    %title= @title || SiteConfig.title
+    %link{:rel=>"stylesheet", :type=>"text/css",:href=>"http://fonts.googleapis.com/css?family=Oxygen"}
+    %link{:rel => "stylesheet", :type => "text/css", :href => "/css/main.css"}
+    %script{:src=>"/js/html5.js"}
+  %body
+    %div{:class=>"social"}
+      %ul
+        %li 
+          %a{:href=>"http://github.com/annavester", :class=>"github", :target=>"_blank"} Github
+        %li 
+          %a{:href=>"http://linkedin.com/annavester", :class=>"linkedin", :target=>"_blank"} LinkedIn 
+        %li 
+          %a{:href=>"http://twitter.com/annavester", :class=>"twitter", :target=>"_blank"} Twitter 
+          %li 
+            %a{:href=>"http://gplus.to/annavester", :class=>"gplus", :target=>"_blank"} Google+  
+          %li 
+            %a{:href=>"http://forrst.me/annavester", :class=>"forrst", :target=>"_blank"} Forrst
+          
+    %section{:id=>"content", :class=>"clearfix"}= yield
+          
+    %footer
+      %div{:class=>"wrapper"}
+        %ul
+          %li 
+            %a{:href=>"http://github.com/annavester", :class=>"github", :target=>"_blank"} Github
+          %li 
+            %a{:href=>"http://linkedin.com/annavester", :class=>"linkedin", :target=>"_blank"} LinkedIn  
+          %li 
+            %a{:href=>"http://twitter.com/annavester", :class=>"twitter", :target=>"_blank"} Twitter  
+          %li 
+            %a{:href=>"http://gplus.to/annavester", :class=>"gplus", :target=>"_blank"} Google+  
+          %li 
+            %a{:href=>"http://forrst.me/annavester", :class=>"forrst", :target=>"_blank"} Forrst
+        %p
+          Design &amp; Development by Anna Vester
+          
+    %script{:src=>"/js/jquery-1.7.2.min.js"}
+    %script{:src=>"/js/jquery.flexslider-min.js"}
+    %script{:src=>"/js/scripts.js"}   
