@@ -5,17 +5,24 @@
   %nav 
     %ul
       %li
-        %a{:href=>"/"} Home 
+        %a{:href=>"/"} Home
       %li
-        %a{:href=>"/projects/"} Projects 
-      %li
-        %a{:href=>"/resume/"} Resume 
-      %li{:class=>"active"}
-        %a{:href=>"/contact/"} Contact
+        %a{:href=>"http://books.annavester.com/", :title=>"My Books"} My Books
+      /        
+        %li
+          %a{:href=>"/projects/"} Projects 
+        %li
+          %a{:href=>"/resume/"} Resume 
+        %li{:class=>"active"}
+          %a{:href=>"/contact/"} Contact
   
 %article
   %h2 
     Contact
-    %form{:action=>"/contact/", :method=>"post"}
-      %input{:type=>"text", :name=>"message"}
-      %input{:type=>"submit"}
+    
+    
+    
+    /
+      %form{:action=>"/contact/", :method=>"post"}
+        %input{:type=>"text", :name=>"message"}
+        %input{:type=>"submit"}

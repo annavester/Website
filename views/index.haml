@@ -5,33 +5,136 @@
   %nav 
     %ul
       %li{:class=>"active"}
-        %a{:href=>"/"} Home 
+        %a{:href=>"/"} Home
       %li
-        %a{:href=>"/projects/"} Projects 
-      %li
-        %a{:href=>"/resume/"} Resume 
-      %li
-        %a{:href=>"/contact/"} Contact
+        %a{:href=>"http://books.annavester.com/", :title=>"My Books"} My Books
+      /        
+        %li
+          %a{:href=>"/projects/"} Projects 
+        %li
+          %a{:href=>"/resume/"} Resume 
+        %li
+          %a{:href=>"/contact/"} Contact
 
 %article{:class=>"pov"}
   %div{:class=>"flexslider"}
     %ul{:class=>"slides"}
       %li
-        %img{:src=>"/images/demo-stuff/inacup_samoa.jpg", :alt=>"Sample"}
-          %p{:class=>"flex-caption"} Captions and cupcakes. Winning combination.
+        %a{:href=>"http://www.acceptanceinsurance.com", :title=>"Acceptance Insurance", :target=>"_blank"} 
+          %img{:src=>"/images/portfolio/acceptance.jpg", :alt=>"Acceptance Insurance"}
+        %div{:class=>"flex-caption clearfix"} 
+          %h2
+            Acceptance Insurance
+            %span
+              in collaboration with 
+              %a{:href=>"http://www.idea-loop.com/", :target=>"_blank"} Idealoop
+          %p
+            %a{:href=>"http://umbraco.com/", :target=>"_blank"} Umbraco
+            %a{:href=>"http://html5doctor.com/", :target=>"_blank"} HTML/5
+            %a{:href=>"http://www.w3.org/Style/CSS/Overview.en.html", :target=>"_blank"} CSS
+            %a{:href=>"http://jquery.com/", :target=>"_blank"} jQuery
+            %a{:class=>"btn", :href=>"http://www.acceptanceinsurance.com", :title=>"Acceptance Insurance", :target=>"_blank"} View Site
+                
       %li
-        %a{:href=>"#"} 
-          %img{:src=>"/images/demo-stuff/inacup_pumpkin.jpg", :alt=>"Sample"}
-        %p{:class=>"flex-caption"} This is image in a link!
+        %a{:href=>"http://www.idea-loop.com", :title=>"Idealoop", :target=>"_blank"} 
+          %img{:src=>"/images/portfolio/idealoop.jpg", :alt=>"idealoop"}
+        %div{:class=>"flex-caption clearfix"} 
+          %h2 
+            Idealoop
+            %span
+              in collaboration with 
+              %a{:href=>"http://www.idea-loop.com/", :target=>"_blank"} Idealoop
+          %p
+            %a{:href=>"http://html5doctor.com/", :target=>"_blank"} HTML/5
+            %a{:href=>"http://www.w3.org/Style/CSS/Overview.en.html", :target=>"_blank"} CSS
+            %a{:href=>"http://jquery.com/", :target=>"_blank"} jQuery
+            %a{:class=>"btn", :href=>"http://www.idea-loop.com", :title=>"Idealoop", :target=>"_blank"} View Site
       %li
-        %img{:src=>"/images/demo-stuff/inacup_donut.jpg", :alt=>"Sample"}
+        %a{:href=>"http://m.idea-loop.com", :title=>"Idealoop Mobile", :target=>"_blank"} 
+          %img{:src=>"/images/portfolio/idealoop_mobile.jpg", :alt=>"Sample"}
+        %div{:class=>"flex-caption clearfix"} 
+          %h2 
+            Idealoop Mobile
+            %span
+              in collaboration with 
+              %a{:href=>"http://www.idea-loop.com/", :target=>"_blank"} Idealoop
+          %p
+            %a{:href=>"http://html5doctor.com/", :target=>"_blank"} HTML/5
+            %a{:href=>"http://www.w3.org/Style/CSS/Overview.en.html", :target=>"_blank"} CSS
+            %a{:href=>"http://jquerymobile.com/", :target=>"_blank"} jQuery Mobile
+            %a{:class=>"btn", :href=>"http://m.idea-loop.com", :title=>"Idealoop Mobile", :target=>"_blank"} View Site
       %li
-        %img{:src=>"/images/demo-stuff/inacup_vanilla.jpg", :alt=>"Sample"}
+        %a{:href=>"http://www.trenduim.com", :title=>"Trendium", :target=>"_blank"}
+          %img{:src=>"/images/portfolio/trendium.jpg", :alt=>"Trendium"}
+        %div{:class=>"flex-caption clearfix"} 
+          %h2 
+            Trendium
+            %span
+              in collaboration with 
+              %a{:href=>"http://www.matthewwarlick.com/", :target=>"_blank"} Matthew Warlick
+          %p
+            %a{:href=>"http://html5doctor.com/", :target=>"_blank"} HTML/5
+            %a{:href=>"http://www.w3.org/Style/CSS/Overview.en.html", :target=>"_blank"} CSS
+            %a{:href=>"http://jquery.com/", :target=>"_blank"} jQuery
+            %a{:class=>"btn", :href=>"http://trendium.com", :title=>"Trendium", :target=>"_blank"} View Site
+      %li
+        %a{:href=>"http://www.joinjacksparty.com/Mobile/", :title=>"Join Jack's Party Mobile", :target=>"_blank"} 
+          %img{:src=>"/images/portfolio/joinjacksparty_mobile.jpg", :alt=>"Join Jack's Party Mobile"}
+        %div{:class=>"flex-caption clearfix"} 
+          %h2 
+            Join Jack's Party
+            %span
+              in collaboration with 
+              %a{:href=>"http://www.idea-loop.com/", :target=>"_blank"} Idealoop
+          %p
+            %a{:href=>"http://html5doctor.com/", :target=>"_blank"} HTML/5
+            %a{:href=>"http://www.w3.org/Style/CSS/Overview.en.html", :target=>"_blank"} CSS
+            %a{:href=>"http://jquery.com/", :target=>"_blank"} jQuery
+            %a{:class=>"btn", :href=>"http://www.joinjacksparty.com/Mobile/", :title=>"Join Jack's Party Mobile", :target=>"_blank"} View Site
+      %li
+        %a{:href=>"http://m.bordendairy.com/", :title=>"Borden Dairy Mobile", :target=>"_blank"} 
+          %img{:src=>"/images/portfolio/borden_mobile.jpg", :alt=>"Borden Dairy Mobile"}
+        %div{:class=>"flex-caption clearfix"} 
+          %h2 
+            Borden Dairy Mobile
+            %span
+              in collaboration with 
+              %a{:href=>"http://www.idea-loop.com/", :target=>"_blank"} Idealoop
+          %p
+            %a{:href=>"http://html5doctor.com/", :target=>"_blank"} HTML/5
+            %a{:href=>"http://www.w3.org/Style/CSS/Overview.en.html", :target=>"_blank"} CSS
+            %a{:href=>"http://jquery.com/", :target=>"_blank"} jQuery
+            %a{:class=>"btn", :href=>"http://m.bordendairy.com/", :title=>"Borden Dairy Mobile", :target=>"_blank"} View Site
+      %li
+        %a{:href=>"http://dallassymphony.com/", :title=>"Dallas Symphony Orchestra", :target=>"_blank"} 
+          %img{:src=>"/images/portfolio/dallassymphony.jpg", :alt=>"Dallas Symphony Orchestra"}
+        %div{:class=>"flex-caption clearfix"} 
+          %h2 
+            Dallas Symphony Orchestra
+            %span
+              in collaboration with 
+              %a{:href=>"http://www.idea-loop.com/", :target=>"_blank"} Idealoop
+          %p
+            %a{:href=>"http://html5doctor.com/", :target=>"_blank"} HTML/5
+            %a{:href=>"http://www.w3.org/Style/CSS/Overview.en.html", :target=>"_blank"} CSS
+            %a{:href=>"http://jquery.com/", :target=>"_blank"} jQuery
+            %a{:class=>"btn", :href=>"http://dallassymphony.com/", :title=>"Dallas Symphony Orchestra", :target=>"_blank"} View Site
 
 %div{:class=>"mod"}
   %h2 About Me
   %p I am a passionate developer who enjoys working with CSS, HTML, Javascript, Django, and etc.
-  %p I am proficient in HTML5, CSS3, Javascript (jQuery), Python, Django, ASP.Net, Wordpress, Umbraco. I specialize in .PSD to HTML Conversion.
+  %p I am proficient in HTML5, CSS3, Javascript (jQuery), Python, Django, ASP.Net, Umbraco. I specialize in .PSD to HTML Conversion.
+  %h2 Under the Hood
+  %p{:class=>"skills"} 
+    This is built with:
+    %a{:href=>"http://www.sinatrarb.com/", :target=>"_blank"} Sinatra
+    %a{:href=>"http://haml.info/", :target=>"_blank"} Haml
+    %a{:href=>"http://css3.info/", :target=>"_blank"} CSS/3
+    %a{:href=>"http://html5doctor.com/", :target=>"_blank"} HTML/5
+    %a{:href=>"http://jquery.com/", :target=>"_blank"} jQuery
+    %a{:href=>"http://compass-style.org/", :target=>"_blank"} Compass
+    %a{:href=>"http://sass-lang.com/", :target=>"_blank"} Sass
+    %a{:href=>"http://www.adobe.com/products/photoshopfamily.html", :target=>"_blank"} Photoshop    
   
 %div{:class=>"mod"}
   %h2 My Tweets
