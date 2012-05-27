@@ -4,6 +4,6 @@ require 'haml'
 require 'net/http'
 require 'open-uri'
 require 'json'
-require 'app.rb'
+require './app.rb'
 
 run Sinatra::Application
