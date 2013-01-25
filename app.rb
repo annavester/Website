@@ -17,7 +17,7 @@ configure do
   SiteConfig = OpenStruct.new(
     :title => 'Freelance Web Developer',
     :author => 'Anna Vester',
-    :url_base => 'http://localhost:4567/'
+    :url_base => 'http://annavester.com/'
   )
 end
 
