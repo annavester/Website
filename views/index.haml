@@ -137,22 +137,32 @@
   
 %div{:class=>"mod clearfix"}
   %h2 My Tweets
-  %ul{:class=>"tweets"}
-    - @tweets.each do |tweet|
-      %li
-        #{tweet['text']}
-    
+  - if @tweets.empty?
+    %p No tweets found
+  - else
+    %ul{:class=>"tweets"}
+      - @tweets.each do |tweet|
+        %li
+          #{tweet['text']}
+
 %div{:class=>"mod"}
   %h2 On My Bookshelf
   %h3 Reading
-  %ul{:class=>"clearfix"}
-    - @reading_now.each do |book|
-      %li
-        %a{:target=>'_blank', :href=>"http://books.annavester.com/book/#{book['id']}"}
-          %img{:src=>"http://books.annavester.com/static/images/book_thumbs/#{book['filename']}", :alt=>""}
+  - if @reading_now.empty?
+    %p No books found
+  - else
+    %ul{:class=>"clearfix"}
+      - @reading_now.each do |book|
+        %li
+          %a{:target=>'_blank', :href=>"http://books.annavester.com/book/#{book['id']}"}
+            %img{:src=>"http://books.annavester.com/static/images/book_thumbs/#{book['filename']}", :alt=>""}
+
   %h3 Just Finished
-  %ul{:class=>"clearfix"}
-    - @latest_reads.each do |book|
-      %li
-        %a{:target=>'_blank', :href=>"http://books.annavester.com/book/#{book['id']}"}
-          %img{:src=>"http://books.annavester.com/static/images/book_thumbs/#{book['filename']}", :alt=>""}
+  - if @latest_reads.empty?
+    %p No books found
+  - else
+    %ul{:class=>"clearfix"}
+      - @latest_reads.each do |book|
+        %li
+          %a{:target=>'_blank', :href=>"http://books.annavester.com/book/#{book['id']}"}
+            %img{:src=>"http://books.annavester.com/static/images/book_thumbs/#{book['filename']}", :alt=>""}
