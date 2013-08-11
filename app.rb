@@ -15,7 +15,7 @@ configure do
   set :views, "#{File.dirname(__FILE__)}/views"
   Compass.add_project_configuration(File.join(Sinatra::Application.root, 'config', 'compass.config'))
   SiteConfig = OpenStruct.new(
-    :title => 'Freelance Web Developer',
+    :title => 'Web Developer',
     :author => 'Anna Vester',
     :url_base => 'http://localhost:4567/'
   )
@@ -46,7 +46,6 @@ get '/css/:name.css' do
 end
 
 get '/' do
-  
   query = '/1/statuses/user_timeline.json?include_rts=true&screen_name=annavester&count=5'  
   uri = URI.parse('https://api.twitter.com/')  
   http = Net::HTTP.new(uri.host, uri.port)
@@ -69,7 +68,6 @@ get '/' do
   request = Net::HTTP::Get.new(query)
   response = http.request(request)
   @reading_now = JSON.parse(response.body)
-  
   haml :index
 end
 

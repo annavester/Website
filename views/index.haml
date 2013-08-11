@@ -122,7 +122,7 @@
 %div{:class=>"mod"}
   %h2 About Me
   %p I am a passionate developer who enjoys working with CSS, HTML, Javascript, Django, and etc.
-  %p I am proficient in HTML5, CSS3, Javascript (jQuery), Python, Django, ASP.Net, Umbraco. I specialize in .PSD to HTML Conversion.
+  %p I am proficient in HTML5, CSS3, Javascript (jQuery), Python, Django, ASP.Net, Umbraco. 
   %h2 Under the Hood
   %p{:class=>"skills"} 
     This is built with:
@@ -136,21 +136,15 @@
     %a{:href=>"http://www.adobe.com/products/photoshopfamily.html", :target=>"_blank"} Photoshop    
   
 %div{:class=>"mod clearfix"}
-  %h2 My Tweets
-  %ul{:class=>"tweets"}
-    - @tweets.each do |tweet|
-      %li
-        #{tweet['text']}
-    
-%div{:class=>"mod"}
-  %h2 On My Bookshelf
-  %h3 Reading
+  %h2 Currently Reading
   %ul{:class=>"clearfix"}
     - @reading_now.each do |book|
       %li
         %a{:target=>'_blank', :href=>"http://books.annavester.com/book/#{book['id']}"}
           %img{:src=>"http://books.annavester.com/static/images/book_thumbs/#{book['filename']}", :alt=>""}
-  %h3 Just Finished
+    
+%div{:class=>"mod"}
+  %h2 Just Finished 
   %ul{:class=>"clearfix"}
     - @latest_reads.each do |book|
       %li
