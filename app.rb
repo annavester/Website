@@ -17,7 +17,7 @@ configure do
   SiteConfig = OpenStruct.new(
     :title => 'Web Developer',
     :author => 'Anna Vester',
-    :url_base => 'http://localhost:4567/'
+    :url_base => 'http://annavester.com/'
   )
 end
 
@@ -46,6 +46,7 @@ get '/css/:name.css' do
 end
 
 get '/' do
+<<<<<<< HEAD
   query = '/1/statuses/user_timeline.json?include_rts=true&screen_name=annavester&count=5'  
   uri = URI.parse('https://api.twitter.com/')  
   http = Net::HTTP.new(uri.host, uri.port)
@@ -68,6 +69,45 @@ get '/' do
   request = Net::HTTP::Get.new(query)
   response = http.request(request)
   @reading_now = JSON.parse(response.body)
+=======
+  begin
+    query = '/1/statuses/user_timeline.json?include_rts=true&screen_name=annavester&count=5'
+    uri = URI.parse('https://api.twitter.com/')
+    http = Net::HTTP.new(uri.host, uri.port)
+    http.use_ssl = true
+    http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+    request = Net::HTTP::Get.new(query)
+    response = http.request(request)
+    @tweets = JSON.parse(response.body)
+  rescue StandardError, Timeout::Error => e
+    @tweets = []
+  end
+
+  begin
+    query = '/api/v1/latest_read/10/'
+    uri = URI.parse('http://books.annavester.com/')
+    http = Net::HTTP.new(uri.host, uri.port)
+    request = Net::HTTP::Get.new(query)
+    response = http.request(request)
+    @latest_reads = JSON.parse(response.body)
+  rescue StadardError, Timeout::Error => e
+    @latest_reads = []
+  end
+
+  begin
+    query = '/api/v1/reading_now/5/'
+    uri = URI.parse('http://books.annavester.com/')
+    http = Net::HTTP.new(uri.host, uri.port)
+    request = Net::HTTP::Get.new(query)
+    response = http.request(request)
+    @reading_now = JSON.parse(response.body)
+  rescue
+    @reading_now = []
+  end
+  
+
+  
+>>>>>>> d5ac2cd8f7cf79d4f6a8b4462fd6323c71133ccf
   haml :index
 end
 
