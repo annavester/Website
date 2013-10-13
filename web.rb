@@ -48,7 +48,7 @@ end
 get '/' do
   begin
     query = '/api/v1/latest_read/10/'
-    uri = URI.parse('http://books.annavester.com/')
+    uri = URI.parse('http://books.annavester.com')
     http = Net::HTTP.new(uri.host, uri.port)
     request = Net::HTTP::Get.new(query)
     response = http.request(request)
@@ -59,7 +59,7 @@ get '/' do
 
   begin
     query = '/api/v1/reading_now/5/'
-    uri = URI.parse('http://books.annavester.com/')
+    uri = URI.parse('http://books.annavester.com')
     http = Net::HTTP.new(uri.host, uri.port)
     request = Net::HTTP::Get.new(query)
     response = http.request(request)
