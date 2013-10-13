@@ -47,19 +47,6 @@ end
 
 get '/' do
   begin
-    query = '/1/statuses/user_timeline.json?include_rts=true&screen_name=annavester&count=5'
-    uri = URI.parse('https://api.twitter.com/')
-    http = Net::HTTP.new(uri.host, uri.port)
-    http.use_ssl = true
-    http.verify_mode = OpenSSL::SSL::VERIFY_NONE
-    request = Net::HTTP::Get.new(query)
-    response = http.request(request)
-    @tweets = JSON.parse(response.body)
-  rescue StandardError, Timeout::Error => e
-    @tweets = []
-  end
-
-  begin
     query = '/api/v1/latest_read/10/'
     uri = URI.parse('http://books.annavester.com/')
     http = Net::HTTP.new(uri.host, uri.port)
