@@ -53,7 +53,7 @@ get '/' do
     request = Net::HTTP::Get.new(query)
     response = http.request(request)
     @latest_reads = JSON.parse(response.body)
-  rescue StadardError, Timeout::Error => e
+  rescue
     @latest_reads = []
   end
 
