@@ -7,7 +7,7 @@
       %li{:class=>"active"}
         %a{:href=>"/"} Home
       %li
-        %a{:href=>"http://books.annavester.com/", :title=>"My Books"} My Books
+        %a{:href=>"http://velikasha.webfactional.com/", :title=>"My Books"} My Books
       /        
         %li
           %a{:href=>"/projects/"} Projects 
@@ -154,13 +154,13 @@
   %ul{:class=>"clearfix"}
     - @reading_now.each do |book|
       %li
-        %a{:target=>'_blank', :href=>"http://books.annavester.com/book/#{book['id']}"}
-          %img{:src=>"http://books.annavester.com/static/images/book_thumbs/#{book['filename']}", :alt=>""}
+        %a{:target=>'_blank', :href=>"http://velikasha.webfactional.com/book/#{book['id']}"}
+          %img{:src=>"http://velikasha.webfactional.com/static/images/book_thumbs/#{book['filename']}", :alt=>""}
     
 %div{:class=>"mod"}
   %h2 Just Finished 
   %ul{:class=>"clearfix"}
     - @latest_reads.each do |book|
       %li
-        %a{:target=>'_blank', :href=>"http://books.annavester.com/book/#{book['id']}"}
-          %img{:src=>"http://books.annavester.com/static/images/book_thumbs/#{book['filename']}", :alt=>""}
+        %a{:target=>'_blank', :href=>"http://velikasha.webfactional.com/book/#{book['id']}"}
+          %img{:src=>"http://velikasha.webfactional.com/static/images/book_thumbs/#{book['filename']}", :alt=>""}
