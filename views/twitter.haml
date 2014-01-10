@@ -1,0 +1,54 @@
+!!! 5
+%html
+  %head
+    %title Anna Vester - Freelance Web Developer
+    %link{:rel=>"stylesheet", :type=>"text/css",:href=>"http://fonts.googleapis.com/css?family=Oxygen"}
+    %link{:rel => "stylesheet", :type => "text/css", :href => "/css/main.css"}
+    %script{:src=>"/js/modernizr.js"}
+    /[if lt IE 9]
+      %script{:src=>"/js/PIE.js"}
+  %body
+    %div{:class=>"social"}
+      %ul
+        %li 
+          %a{:href=>"http://github.com/annavester", :class=>"github"} Github
+        %li 
+          %a{:href=>"http://linkedin.com/annavester", :class=>"linkedin"} LinkedIn        
+          
+    %section{:id=>"content"}
+      %header
+        %h1 
+          %b Anna Vester
+          { web developer }
+        %nav 
+          %ul
+            %li
+              %a{:href=>"/"} Home 
+            %li{:class=>"active"}
+              %a{:href=>"/projects/"} Projects 
+            %li
+              %a{:href=>"/resume/"} Resume 
+            %li
+              %a{:href=>"/contact/"} Contact
+        
+      
+      %article
+        %h2
+          Twitter
+        %a {:class=>"twitter-timeline", :href=>"https://twitter.com/annavester/javascript", :data=>{:widget_id=>"421462852059160576"}} Tweets from https://twitter.com/annavester/javascript
+        %script{:src=>"/js/twitter.js"}
+
+
+      
+    %footer
+      %div{:class=>"wrapper"}
+        %ul
+          %li 
+            %a{:href=>"http://github.com/annavester", :class=>"github ir"} Github
+          %li 
+            %a{:href=>"http://linkedin.com/annavester", :class=>"linkedin"} LinkedIn    
+        %p
+          Design &amp; Development by Anna Vester
+          
+    %script{:src=>"/js/jquery-1.7.2.min.js"}
+    %script{:src=>"/js/scripts.js"}   

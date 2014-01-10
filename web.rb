@@ -83,6 +83,10 @@ get '/contact/' do
   haml :contact
 end
 
+get '/twitter' do
+  haml :twitter
+end
+
 post '/contact/' do  
   "You said '#{params[:message]}'"  
 end  
