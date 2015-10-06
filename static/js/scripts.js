@@ -19,10 +19,8 @@ if ($('.flexslider').length) {
   
 $(function() {
   $.each($('.tweets').find('li'), function(){
-    $(this).html($(this).text().replace(/(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig, '<a href="$1" target="_blank">$1</a>').replace(/(^|\s)@(\w+)/g, '$1<a href="http://www.twitter.com/$2" target="_blank">@$2</a>'));   
-    $(this).on('click', function() {
-        console.log(test);
-    });
+    var $this = $(this);  
+    $this.html($this.text().replace(/(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig, '<a href="$1" target="_blank">$1</a>').replace(/(^|\s)@(\w+)/g, '$1<a href="http://www.twitter.com/$2" target="_blank">@$2</a>'));
   });
   
   if($('.mod').length) {
